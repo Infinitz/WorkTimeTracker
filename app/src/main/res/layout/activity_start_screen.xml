@@ -11,12 +11,13 @@
         android:id="@+id/addWorkTimeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/save_work_time_button_name"/>
+        android:text="@string/save_work_time_button_name"
+        android:onClick="addWorkTime" />
 
     <Button
         android:id="@+id/browseWorkTimesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/browse_work_time_button_name"/>
+        android:text="@string/browse_work_time_button_name" />
 
 </LinearLayout>
