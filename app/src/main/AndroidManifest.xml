@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SaveWorkTimeScreen"></activity>
+        <activity android:name=".SaveWorkTimeScreen" />
+        <activity android:name=".BrowseWorkTimesScreen"></activity>
     </application>
 
 </manifest>
