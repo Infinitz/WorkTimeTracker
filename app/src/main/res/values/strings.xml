@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Work Time Tracker</string>
+    <string name="save_work_time_button_name">Add work time</string>
+    <string name="browse_work_time_button_name">Browse work times</string>
+</resources>
