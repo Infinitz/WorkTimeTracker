@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="tiko.tamk.fi.worktimetracker.SaveWorkTimeScreen">
 
+    <EditText
+        android:id="@+id/workHourEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/work_time_hint"
+        android:inputType="number"/>
+
 </LinearLayout>
