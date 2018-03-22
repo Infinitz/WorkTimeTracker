@@ -44,7 +44,8 @@ public class StartScreen extends AppCompatActivity {
         super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
             case (R.id.menuAddButton):
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, AddWorkTimes.class);
+                startActivity(intent);
                 return true;
         }
         return false;
