@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="tiko.tamk.fi.worktimetracker.StartScreen"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/addWorkTimeButton"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/save_work_time_button_name"
-        android:onClick="addWorkTime" />
-
-    <Button
-        android:id="@+id/browseWorkTimesButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/browse_work_time_button_name"
-        android:onClick="browseWorkTime"/>
-
+        android:layout_height="match_parent" />
 </LinearLayout>
