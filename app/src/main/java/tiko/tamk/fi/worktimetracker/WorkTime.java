@@ -9,8 +9,6 @@ public class WorkTime {
     private double hours;
     private String description;
 
-    public WorkTime() {}
-
     public WorkTime(String title, double hours, String description) {
         this.title = title;
         this.hours = hours;

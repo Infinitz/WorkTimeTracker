@@ -11,7 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class StartScreen extends AppCompatActivity {
+
+    ArrayList<WorkTime> listItems = new ArrayList<>();
+    MyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +25,21 @@ public class StartScreen extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.listView);
 
-        WorkTime[] items = {
-                new WorkTime("Title1", 8, "Description1"),
-                new WorkTime("Title2", 8, "Description2"),
-                new WorkTime("Title3", 8, "Description3"),
-        };
+        listItems.add(new WorkTime("Title", 8, "Description"));
 
-        ArrayAdapter<WorkTime> adapter = new ArrayAdapter<WorkTime>(this,
-                android.R.layout.simple_list_item_1, items);
+        adapter = new MyAdapter(this, listItems);
 
         listView.setAdapter(adapter);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            listItems.add(new WorkTime(
+                    extras.getString("title"),
+                    extras.getDouble("hours"),
+                    extras.getString("description")
+            ));
+            adapter.notifyDataSetChanged();
+        }
     }
 
     @Override
