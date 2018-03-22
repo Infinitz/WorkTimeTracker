@@ -38,4 +38,13 @@ public class WorkTime {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "WorkTime{" +
+                "title='" + title + '\'' +
+                ", hours=" + hours +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
