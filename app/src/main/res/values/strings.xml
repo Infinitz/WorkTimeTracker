@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Work Time Tracker</string>
-    <string name="save_work_time_button_name">Add work time</string>
-    <string name="browse_work_time_button_name">Browse work times</string>
-    <string name="work_time_hint">Working hours here</string>
+    <string name="title_hint">Title</string>
+    <string name="hours_hint">Hours</string>
+    <string name="description_hint">Description</string>
     <string name="menu_add_button">+</string>
+    <string name="save_hours_button">Save</string>
 </resources>
