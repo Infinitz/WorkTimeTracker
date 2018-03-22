@@ -7,12 +7,37 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Simple activity for adding new work times.
+ *
+ * @author Risto Pulkkinen
+ * @version 1.0
+ * @since 1.0
+ */
+
 public class AddWorkTimes extends AppCompatActivity {
 
+    /**
+     * EditText field for the WorkTime title.
+     */
     private EditText titleEditText;
+
+    /**
+     * EditText field for the WorkTime hours.
+     */
     private EditText hoursEditText;
+
+    /**
+     * EditText field for the WorkTime description.
+     */
     private EditText descriptionEditText;
 
+    /**
+     * Initializes the activity and EditText's.
+     *
+     * @param savedInstanceState is a reference to a Bundle object that is passed into the onCreate
+     *                           method of every Android Activiy.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +48,11 @@ public class AddWorkTimes extends AppCompatActivity {
         descriptionEditText = (EditText) findViewById(R.id.descriptionEditText);
     }
 
+    /**
+     * Sends all of the information in the EditText fields to the StartScreen activity for display.
+     *
+     * @param view Activity view.
+     */
     public void saveHours(View view) {
         try {
             String title = titleEditText.getText().toString();
