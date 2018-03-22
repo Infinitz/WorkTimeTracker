@@ -14,10 +14,6 @@ public class AddWorkTimes extends AppCompatActivity {
     private EditText hoursEditText;
     private EditText descriptionEditText;
 
-    private String title;
-    private Double hours;
-    private String description;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +26,9 @@ public class AddWorkTimes extends AppCompatActivity {
 
     public void saveHours(View view) {
         try {
-            title = titleEditText.getText().toString();
-            hours = Double.parseDouble(hoursEditText.getText().toString());
-            description = descriptionEditText.getText().toString();
+            String title = titleEditText.getText().toString();
+            Double hours = Double.parseDouble(hoursEditText.getText().toString());
+            String description = descriptionEditText.getText().toString();
 
             Intent intent = new Intent(this, StartScreen.class);
             intent.putExtra("title", title);
