@@ -19,7 +19,7 @@ public class StartScreen extends AppCompatActivity {
     }
 
     public void browseWorkTime(View view) {
-        Intent intent = new Intent(this, SaveWorkTimeScreen.class);
+        Intent intent = new Intent(this, BrowseWorkTimesScreen.class);
         startActivity(intent);
     }
 }
