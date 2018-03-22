@@ -10,19 +10,39 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+/**
+ * Start screen for the working time hours application.
+ * User can browse past hours and add new ones in here.
+ *
+ * @author Risto Pulkkinen
+ * @version 1.0
+ * @since 1.0
+ */
+
 public class StartScreen extends AppCompatActivity {
 
+    /**
+     * listItems contains all the WorkTime items displayed in this activity.
+     */
     ArrayList<WorkTime> listItems = new ArrayList<>();
+
+    /**
+     * adapter contains an instance of MyAdapter which is used to work with ListView.
+     */
     MyAdapter adapter;
 
+    /**
+     * onCreate initializes the activity and keeps track of the ListView.
+     *
+     * @param savedInstanceState is a reference to a Bundle object that is passed into the onCreate
+     *                           method of every Android Activiy.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
 
         ListView listView = (ListView) findViewById(R.id.listView);
-
-        listItems.add(new WorkTime("Title", 8, "Description"));
 
         adapter = new MyAdapter(this, listItems);
 
@@ -39,6 +59,12 @@ public class StartScreen extends AppCompatActivity {
         }
     }
 
+    /**
+     * Initializes the action bar button which adds new hours.
+     *
+     * @param menu menu resource is inflated into this.
+     * @return boolean of true for the menu to be dispalyed
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -46,6 +72,12 @@ public class StartScreen extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Starts new activity for adding new working hours when menu item is clicked.
+     *
+     * @param item A single menu item contained in action bar menu.
+     * @return true if the menu item was clicked, false if not.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
